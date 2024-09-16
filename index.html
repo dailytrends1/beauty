@@ -20,122 +20,233 @@ src="https://www.facebook.com/tr?id=1583931499003159&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Links</title>
+    <title>Click to watch</title>
     <style>
         body {
-            background-color: #121212;
-            color: white;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ddd;
+        }
+
+        header, .slider, .actors, footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
             margin: 0;
         }
-        .header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
-            box-sizing: border-box;
+
+        .slider p, .actors p, footer p {
+            font-size: 1em;
+            margin: 10px 0;
         }
-        .header .logo {
+
+        .actors h2 {
             font-size: 1.5em;
+            margin: 20px 0 10px;
         }
-        .header .subscribe {
-            background-color: #ff5722;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev, .next {
             cursor: pointer;
-        }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .button {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 10px;
-            padding: 15px 30px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            width: 300px;
-            text-align: left;
-            transition: transform 0.3s ease;
-        }
-        .button img {
-            width: 50px;
-            height: 50px;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-        .button span {
-            font-weight: bold;
-        }
-        .button:hover {
-            transform: scale(1.05);
-        }
-        .footer {
             position: absolute;
-            bottom: 10px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-            box-sizing: border-box;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .actor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .actor-container a {
+            margin: 10px;
+            max-width: 30%;
+        }
+
+        .watch-now-button, .whatsapp-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .watch-now-button {
+            border: 2px solid red;
+            color: white;
+        }
+
+        .whatsapp-button {
+            border: 2px solid #04AA6D;
+            color: white;
+        }
+
+        .watch-now-button:hover, .whatsapp-button:hover {
+            background-color: #028a50;
+        }
+
         @media (max-width: 600px) {
-            .header, .footer {
-                flex-direction: column;
-                align-items: center;
+            header h1 {
+                font-size: 1.5em;
             }
-            .button {
-                width: 100%;
-                padding: 10px;
+
+            .slider p, .actors p, footer p {
+                font-size: 0.9em;
             }
-            .button img {
-                width: 40px;
-                height: 40px;
-                margin-right: 10px;
+
+            .actors h2 {
+                font-size: 1.2em;
             }
-            .button:hover {
-                transform: scale(1.1);
+
+            .actor-container a {
+                max-width: 45%;
             }
         }
     </style>
-    <script>
-        function openLink() {
-            window.location.href = 'https://t.co/xQQlCgb4ri';
-        }
-    </script>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">VÍDEO DE SENHORAS LINDAS</div>
-        <button class="subscribe">Subscribe</button>
-    </div>
-    <div class="button-container">
-        <div class="button" onclick="openLink()">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgZgtzfDDGUAMmEpPbQkZSpPOJtdhbz0iNeAZ8Ryh_1SVLYTIaEhEBQ6LjCoxi7a5AntOjXPq_E52Kr6pt8g8qCtdyWk8_Qfg7gEI486C5e1YF2ZcIIjiBP3wCe-cxeqJiXCR045UWHMlLvbmzRDtB48AU-uu-qPs03J06WXnIa9VsTRemUMOPJ3u8sAVA/s600/Untitled%20design%20(5).png" alt="Thumbnail 1">
-            <span>ASSISTA O VÍDEO MAIS QUENTE</span>
+    <nav>
+        <ul>
+            <li><a href="https://t.co/dsWuA3yQLz">Casa</a></li>
+            <li><a href="https://whatsapp.com/channel/0029VaoKXIp8aKvJduzHTg1P">Contacto</a></li>
+            <li><a href="https://t.co/dsWuA3yQLz">De volta ao Facebook</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>ÚLTIMOS VÍDEOS</h1>
+    </header>
+    <section class="slider">
+        <p>Deslize para assistir a mais. Clique no vídeo e aproveite ao máximo.</p>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXpAwPzr6_w9Bv4LC5legsLjdlThyphenhyphenRr-_LlLefnBMloIoogPF2TR5L0YnFllDJ9NN4LfmgEymib2Q7p1phHxGVDLaUYrvboFNgJkZd171woARECVWUW52PUIeUrIirLAB-83CJO1LjZ11A5vZWsczc6a3AxkEBidS5NRSSKLnZw30qIixQCseCNKyIjK61/s600/Untitled%20design%20(20).png" alt="Slider Image 1"></a>
+            </div>
+            <div class="mySlides fade">
+                <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPunSk5fOylEF3QGOGWJObLBvC0uIcincuRGQYWjY5DIGFr39MDaZYkvgf1iwUduFqHIowpzshPU5oNOyjhHvw2N_prfVKk3RzYKLeKht22OGE__HQCYNCuiXlav9MMJOkEcYPjAqLB8ycU2RapFtKnlPtKhHwHGYJWf7HiPeM6ki5Pgd8wbUyRb772F5G/s1024/4.jpg" alt="Slider Image 2"></a>
+            </div>
+            <div class="mySlides fade">
+                <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeJhbUBXGSvIkAmweAxBN2HTuaA4QO_7E4xmTRAb9BXsGFTBTVZN1Bib3ArNoiJjqfXoqG2H75LOYy9v9mPjNToNvi-ABmNmXKegepPs70VAw4JswDzeJ9wLHzB111T_Lmb8PKvWc62Dwg0a-cL3kvtBY0QLo4Xw_wozYofQqWZP6_AzuqtsavuzkhCCJE/s1024/5.jpg" alt="Slider Image 3"></a>
+            </div>
+            <div class="mySlides fade">
+                <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIu_xJZTl_x9-8srenG6TveR_FIHQiXQZsJfHjw6Avk5OMeC5mOkcgeyeECnD6ArgN4IU5-EFa_3EgwNKoJ9x9G4rzmLnLBH1uCoqFLHC_BxktVU-lx5lJAOCx9FbqRVEsDMov8164ILjkUs9AA3engMLhdeDUaaquaSI5HtbrjgNAuCLuftHNCvSlueBf/s1024/6.jpg" alt="Slider Image 4"></a>
+            </div>
+            <div class="mySlides fade">
+                <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPxx9HtVW_zEPKl1qhy6Ze0RdAGu1MFJ2KtbqhygmYgxFdN5DKSmMLopt-NJTnf9rI6TJc5fXciOiihhM7XvU3CxhfUZ20ppGgumcbMB8oigZPjKo4X3Rwrmzpma7rS67Os0yChuGZCeb7scJhFAdUu4HAHra-7fZeQ1ERxwxycTQtDq9UTy1OHWJCWcZI/s1024/3.jpg" alt="Slider Image 5"></a>
+            </div>
+            <div class="mySlides fade">
+                <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSHkqQQYxTGqn4C3RnNHUSDELbU6nI-yzwKwRurdVdNbPbZJm9lrAMR1BEB1x8W9RIlSLwbv7UsWsmli6e-aHZtGEEcrotwF1ssjE89_ADoXEz3ON6trMxZgPa4gxvTgs2_L3TFh90Am5Ihk90HLH_ZiCvLrrLYYBaP1yFt5zfIidxGDv9WThIzjEy0E8S/s1024/2.jpg" alt="Slider Image 6"></a>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
-        <div class="button" onclick="openLink()">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXBZEugG9876Du94c4kimo1DTX3pQJhVI5JSDNoLHJeDVgZ6jmCdjKNtohSEabxEAobvfDaCD4JkUxE3Uw528N_qN1ws1s-G13eKCPwqRWnBNrRyKJbrkZScDB5dbFr5ME4EdHLrxpkCgjynmLV4_WR4DkntVno_AFySWN7Rm-7ivhEfh7vZk-j97c_Wbz/s600/Untitled%20design%20(3).png" alt="Thumbnail 2">
-            <span>ASSISTA NOSSO ÚLTIMO VÍDEO</span>
+        <a href="https://t.co/dsWuA3yQLz" class="watch-now-button">Assista agora</a>
+        <a href="https://whatsapp.com/channel/0029VaoKXIp8aKvJduzHTg1P" class="whatsapp-button">Junte-se ao nosso canal WhatsApp</a>
+    </section>
+    <section class="actors">
+        <h2>OS NOSSOS ATORES</h2>
+        <p>Clique na imagem deles para os ver fazer o indescritível.</p>
+        <div class="actor-container">
+            <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPunSk5fOylEF3QGOGWJObLBvC0uIcincuRGQYWjY5DIGFr39MDaZYkvgf1iwUduFqHIowpzshPU5oNOyjhHvw2N_prfVKk3RzYKLeKht22OGE__HQCYNCuiXlav9MMJOkEcYPjAqLB8ycU2RapFtKnlPtKhHwHGYJWf7HiPeM6ki5Pgd8wbUyRb772F5G/s1024/4.jpg" alt="Actor Image 1"></a>
+            <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeJhbUBXGSvIkAmweAxBN2HTuaA4QO_7E4xmTRAb9BXsGFTBTVZN1Bib3ArNoiJjqfXoqG2H75LOYy9v9mPjNToNvi-ABmNmXKegepPs70VAw4JswDzeJ9wLHzB111T_Lmb8PKvWc62Dwg0a-cL3kvtBY0QLo4Xw_wozYofQqWZP6_AzuqtsavuzkhCCJE/s1024/5.jpg" alt="Actor Image 2"></a>
+            <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIu_xJZTl_x9-8srenG6TveR_FIHQiXQZsJfHjw6Avk5OMeC5mOkcgeyeECnD6ArgN4IU5-EFa_3EgwNKoJ9x9G4rzmLnLBH1uCoqFLHC_BxktVU-lx5lJAOCx9FbqRVEsDMov8164ILjkUs9AA3engMLhdeDUaaquaSI5HtbrjgNAuCLuftHNCvSlueBf/s1024/6.jpg" alt="Actor Image 3"></a>
+            <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPxx9HtVW_zEPKl1qhy6Ze0RdAGu1MFJ2KtbqhygmYgxFdN5DKSmMLopt-NJTnf9rI6TJc5fXciOiihhM7XvU3CxhfUZ20ppGgumcbMB8oigZPjKo4X3Rwrmzpma7rS67Os0yChuGZCeb7scJhFAdUu4HAHra-7fZeQ1ERxwxycTQtDq9UTy1OHWJCWcZI/s1024/3.jpg" alt="Actor Image 4"></a>
+            <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXpAwPzr6_w9Bv4LC5legsLjdlThyphenhyphenRr-_LlLefnBMloIoogPF2TR5L0YnFllDJ9NN4LfmgEymib2Q7p1phHxGVDLaUYrvboFNgJkZd171woARECVWUW52PUIeUrIirLAB-83CJO1LjZ11A5vZWsczc6a3AxkEBidS5NRSSKLnZw30qIixQCseCNKyIjK61/s600/Untitled%20design%20(20).png" alt="Actor Image 5"></a>
+            <a href="https://t.co/dsWuA3yQLz"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoeZfmpNhthwq54EoWdHCLRMW8ah2RCA0R7-vihl_4Sx5jYpiQRAdETh6QxJSIpdf8rvkh1VRwknqlVEIaSrDGYb1Ej7dLHBSzG5QN95__FQvwy8c8VipPut3gh4_pqP_biKquAasEer5WZKttY8ZHyx5OhWjZO5azsCBe6p2m3i6cVrIFyZu_8szJso8-/s600/Untitled%20design%20(19).png" alt="Actor Image 6"></a>
         </div>
-        <div class="button" onclick="openLink()">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhK5Aw8F1UxR0PLadjuOvvS2-BngEBUmoqVRNZ2gOiqi0jD7QqT61X__rkK8NTZmjbXyXra-yZbv8udCqFxuFHFk5oZluK6APN0aIe8gJt83RtNG5YUoS5yasUf9et4eiB7Il3cCuT38rYuLitzSY2sIupO5jDsEjhUBls_rxJ2vtWC4VUiFjp1mftEgtv3/s600/Untitled%20design%20(4).png" alt="Thumbnail 3">
-            <span>ASSISTA AO VÍDEO MAIS TENDENTE</span>
-        </div>
-    </div>
-    <div class="footer">
-        <div>vídeo de lindas mulheres...</div>
-        <div>assistir de graça!</div>
-    </div>
+    </section>
+    <footer>
+        <p>© 2024 All rights reserved</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
 </body>
 </html>
